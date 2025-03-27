@@ -14,7 +14,7 @@ def adminsubmitbutton():
     if(name == "" or iid == "" or phy == "" or chem == "" or math == ""):
         messagebox.showerror("All Fields Required","All Data Is Necessary For Inserting")
     else:
-        conn = mysql.connect(host="localhost",username="root",password="hardikghuge23",database="collegeproject")
+        conn = mysql.connect(host="localhost",username="root",password="dbpass",database="dbname")
         cursor = conn.cursor()
         cursor.execute("insert into studata values('"+ name + "' , '" + iid + "' , '" + phy + "','"+chem+"','"+math+"')")
         cursor.execute("commit")
